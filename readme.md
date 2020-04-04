@@ -7,6 +7,7 @@ literally just scottybot but for me to use on cmd line
 
 
 !Examples!
+
 % courses -f -p compeau
 Overall FCEs for [02601 PRGRMMING SCIENTISTS], [02680 ESS MATH STAT SCI], [02251 GREAT IDEAS IN CB], [02604 FUNDAMENTALS BIOINF] within 2 semesters:
  -  12.44 + 8.85 + 13.5 + 15.15 = 49.94 total hours
