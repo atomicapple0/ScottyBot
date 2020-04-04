@@ -7,17 +7,21 @@ literally just scottybot but for me to use on cmd line
 
 
 !Examples!
+
 % courses -f -p compeau
+
 Overall FCEs for [02601 PRGRMMING SCIENTISTS], [02680 ESS MATH STAT SCI], [02251 GREAT IDEAS IN CB], [02604 FUNDAMENTALS BIOINF] within 2 semesters:
  -  12.44 + 8.85 + 13.5 + 15.15 = 49.94 total hours
  -  (4.74 + 4.58 + 4.2 + 4.22) / 4 = 4.43 / 5.0 avg rating
 
 % courses -f 15150 15251
+
 Overall FCEs for [10301 MACHINE LEARNING], [15251 GRT IDEAS THERTCL CS] within 2 semesters:
  -  12.3 + 14.93 = 27.23 total hours
  -  (4.59 + 4.41) / 2 = 4.5 / 5.0 avg rating
 
 % courses -f 10301 1 15
+
  Overall FCEs for [10301 MACHINE LEARNING] within 1 semester, filtering for greater than 15 responses:
  -  12.95 total hours
  -  4.38 / 5.0 avg rating
@@ -29,6 +33,7 @@ Year | Semester |       Instructor       | # resp. | Total resp. |  % resp.  | F
 2019 |  Spring  |    GORMLEY, MATTHEW    |   24    |     54      |    44     |   13.38   |   4.48
 
 % courses -c 18100
+
  [Introduction to Electrical and Computer Engineering]
  -  Electrical & Computer Engineering
  -  12.0 units
