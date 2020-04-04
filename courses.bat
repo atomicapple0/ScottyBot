@@ -1,0 +1,1 @@
+@py D:\Files\Projects\ScottyBot\main.py %*

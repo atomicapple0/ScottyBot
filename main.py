@@ -1,4 +1,4 @@
-import catalog
+import ScottyBot
 import sys
 import argparse
 from build import build_courses
@@ -12,9 +12,9 @@ def main():
     if cmd == '-u': # update course descriptions json files
         build_courses(args)
     elif cmd == '-f': # get fce info
-        catalog.fce(args)
+        ScottyBot.fce(args)
     elif cmd == '-c': # get courses info
-        catalog.course(args[0]) 
+        ScottyBot.course(args[0]) 
     
 if __name__ == "__main__":
     main()
