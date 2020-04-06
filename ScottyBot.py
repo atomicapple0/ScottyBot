@@ -155,7 +155,8 @@ def fce(args):
 
 	#restricts to the rows requested
 	newRows = [[[course for course in semesterList if course[0] >= now - numSemesters and int(course[10]) > responses] for semesterList in courseList] for courseList in allRows]
-	newRows = [row for row in newRows if row != []]
+	newRows = [row for row in newRows if row != [] and row != [[]]]
+
 
 	# adds up the FCE's
 	totalFCEs = []
