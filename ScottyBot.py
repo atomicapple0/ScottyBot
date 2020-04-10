@@ -132,7 +132,7 @@ def fce(args):
 			courses.append(course)
 
 	courseIDs = [toDigitString(course) for course in courses]
-
+	
 	#segments the data by year, semester
 	allRows = []
 	for courseID in courseIDs:
@@ -150,12 +150,14 @@ def fce(args):
 					semester = row[1]
 				if row[4] == str(courseID):
 					sameSemList.append([row])
-		allRows.append(courseList)
-
-
+		allRows.append(courseList)	
+	
 	#restricts to the rows requested
 	newRows = [[[course for course in semesterList if course[0] >= now - numSemesters and int(course[10]) > responses] for semesterList in courseList] for courseList in allRows]
 	newRows = [row for row in newRows if row != [] and row != [[]]]
+
+	if newRows == []:
+		newRows.append(sameSemList)
 
 
 	# adds up the FCE's
@@ -236,7 +238,7 @@ def fce(args):
 
 	# create and send the final string
 	# [\033[33m (makes the string pretty colors!) \033[39m]
-	stringFinal = 'Overall FCEs for {} within {} semester{}{}:\n - {} \033[31m{}\033[39m total hours \n -  {}\033[31m{}\033[39m / 5.0 avg rating'.format(
+	stringFinal = 'Overall FCEs for {} within {} year{}{}:\n - {} \033[31m{}\033[39m total hours \n -  {}\033[31m{}\033[39m / 5.0 avg rating'.format(
 		courseStrings[:-2], numSemesters, ess, extraString, additionString, np.around(sum(totalFCEs), 2), additionString2, np.around(sum(totalRatings) / len(totalRatings),2))
 	colorama.init()
 	print('\n' + stringFinal) 
