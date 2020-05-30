@@ -169,9 +169,9 @@ def fce(args):
 		count = 0
 		for sem in course:
 			for cour in sem:
-				if not math.isnan(cour[12]):
-					totalFCE += float(cour[12])
-					totalRating += float(cour[13])
+				if not math.isnan(cour[13]):
+					totalFCE += float(cour[13])
+					totalRating += float(cour[14])
 					count += 1
 		else:
 			totalFCEs.append(np.around(totalFCE / count, 2))
