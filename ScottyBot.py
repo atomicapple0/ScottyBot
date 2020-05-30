@@ -18,8 +18,9 @@ def buildFce():
 	global table
 	dir = os.path.dirname(os.path.realpath(__file__)) 
 	table = pd.read_csv(os.path.join(dir,'fce.csv'))
-	table = np.array(table)[:,[*range(0,13)] + [23]]
+	table = np.array(table)[:,[*range(0,14)] + [23]]
 	table = np.array([row for row in table if row[1] != 'Summer' and row[0] > 2013])
+	print(list(enumerate(table[1])))
 
 def buildCourses():
 	global fall, spring
@@ -48,7 +49,8 @@ def getString(mold, row):
 	"""
 	Takes particular columns from an FCE data frame row and assembles them into a string.
 	"""
-	indices = [0, 1, 6, 10, 9, 11, 12, 13]
+	print(row)
+	indices = [0, 1, 6, 10, 11, 12, 13, 14]
 	rowIndices = [row[index] for index in indices]
 	string = mold.format(*rowIndices)
 	return string
@@ -110,7 +112,6 @@ def fce(args):
 		args = courses
 	
 	#check the args are valid
-	indices = [0, 1, 4, 7, 6, 10, 9, 11, 12]
 	if not isValidCourse(args[-1]) and args[-1].isdigit():
 		if len(args) < 2:
 			print('Missing argument - please specify course')

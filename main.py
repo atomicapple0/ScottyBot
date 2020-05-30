@@ -11,6 +11,7 @@ def main():
         args = None
     if cmd == '-u': # update course descriptions json files
         build_courses(args)
+        ScottyBot.buildFce()
     elif cmd == '-f': # get fce info
         ScottyBot.fce(args)
     elif cmd == '-c': # get courses info
